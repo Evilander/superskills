@@ -1,0 +1,32 @@
+{
+  "name": "superskills",
+  "id": "superskills",
+  "owner": {
+    "name": "evilander"
+  },
+  "metadata": {
+    "description": "Autonomous project creation, research-driven production hardening, and 10-dimension project scoring for Claude Code",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "superskills",
+      "source": "./",
+      "description": "Production-grade skills: autonomous project creation (genesis), research-driven 2+ hour QA (production-autopilot), and a 10-dimension scoring rubric.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Tyler Eveland"
+      },
+      "keywords": [
+        "genesis",
+        "production",
+        "rubric",
+        "scoring",
+        "autonomous",
+        "quality"
+      ],
+      "category": "development",
+      "strict": false
+    }
+  ]
+}
