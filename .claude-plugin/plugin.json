@@ -1,0 +1,9 @@
+{
+  "name": "superskills",
+  "version": "1.0.0",
+  "description": "Production-grade skills that transform Claude Code into an autonomous product engineer. Includes autonomous project creation (genesis), research-driven 2+ hour QA (production-autopilot), and a 10-dimension scoring rubric. Use when you want to build a project from scratch, make an existing project production-ready, or score a project's quality.",
+  "author": {
+    "name": "Tyler Eveland",
+    "email": "j.tyler.eveland@gmail.com"
+  }
+}
