@@ -1,41 +1,31 @@
 ---
 name: rubric
-description: "The litmus test. Concrete scoring rubric for what production-ready, lucrative, amazing quality actually means. Score 1-10 across 10 dimensions. Below 7 in any dimension = NOT READY."
-triggers:
-  - "score this"
-  - "rate this project"
-  - "is this ready"
-  - "rubric"
-  - "litmus test"
-  - "how good is this"
+description: "10-dimension project scoring system. This skill should be used when the user says 'score this', 'rate this project', 'is this ready', 'rubric', 'litmus test', or 'how good is this'. Scores WORKS, OBVIOUS, FAST, SOLID, TESTED, ALIVE, MONEY, ELEGANT, READY, ORIGINAL each 1-10 with evidence. Below 7 in any dimension = NOT PRODUCTION READY."
 ---
 
 # The Rubric
 
 <instructions>
-IMPORTANT: This is the objective scoring system. Not vibes. Not "looks good." Numbers.
+IMPORTANT: This is the objective scoring system. Not vibes. Not "looks good." Numbers backed by evidence.
 
 Think very hard about every score. Each dimension requires you to actually test, not just read code. A score without evidence is worthless.
 
 Score each dimension 1-10. **Below 7 in ANY dimension = NOT PRODUCTION READY.**
 </instructions>
 
----
-
-## PERFORMANCE DIRECTIVES
+## Before Scoring
 
 <critical>
-Before scoring, you MUST:
 1. **Actually run the project.** Don't score WORKS based on reading code. Run it. Use it. Break it.
 2. **Actually test as a new user.** Don't score OBVIOUS based on your knowledge of the codebase. Pretend you've never seen it.
-3. **Actually search for competitors.** Don't score ORIGINAL based on your training data. Search NOW for what exists TODAY.
+3. **Actually search for competitors.** Don't score ORIGINAL based on training data. Search NOW for what exists TODAY.
 4. **Score honestly.** If you're tempted to give a 7 because "it's close enough," that's a 6. Round DOWN on uncertainty, not up.
 5. **Provide evidence for every score.** A number without justification is a guess. Show your work.
 </critical>
 
 ---
 
-## THE 10 DIMENSIONS
+## The 10 Dimensions
 
 ### 1. WORKS (Does it actually function?)
 ```
@@ -56,7 +46,7 @@ Before scoring, you MUST:
 7-8: Clear what to do on first screen, intuitive flow
 9-10: A child could use this. Zero friction. The interface IS the instruction.
 ```
-**Test:** Show it to someone who's never seen it. Time how long until they accomplish the core action. Over 30 seconds = not obvious enough.
+**Test:** Time how long until accomplishing the core action. Over 30 seconds = not obvious enough.
 **Evidence required:** Describe the first-time user experience step by step. Where did you hesitate? What wasn't clear?
 
 ### 3. FAST (Does it feel instant?)
@@ -78,7 +68,7 @@ Before scoring, you MUST:
 7-8: OWASP top 10 addressed, deps audited, errors handled gracefully
 9-10: Security-hardened. Rate limited. Input validated everywhere. Logs without leaking PII. Would survive a hostile audit.
 ```
-**Test:** Run `npm audit`/`pip audit`. Try XSS payloads. Try SQL injection. Check for hardcoded secrets. Check auth on every endpoint. Check error handling in every catch block.
+**Test:** Run dependency audit. Try XSS payloads. Try SQL injection. Check for hardcoded secrets. Check auth on every endpoint. Check error handling in every catch block.
 **Evidence required:** Audit output. List of security tests performed. Any findings.
 
 ### 5. TESTED (Would you know if something broke?)
@@ -95,7 +85,7 @@ Before scoring, you MUST:
 ### 6. ALIVE (Does it feel like a living product or a dead prototype?)
 ```
 1-2: Placeholder text, TODO comments visible, broken links
-3-4: Functional but sterile — no personality, no life
+3-4: Functional but sterile -- no personality, no life
 5-6: Competent but forgettable
 7-8: Has personality. Thoughtful copy. Considered design. Feels like someone cared.
 9-10: Has a POINT OF VIEW. You remember it after using it. It has opinions. It has soul. You want to tell someone about it.
@@ -111,7 +101,7 @@ Before scoring, you MUST:
 7-8: Clear value prop. Specific audience. Differentiator. Someone would pay $5/mo for this.
 9-10: Obvious business model. Clear market. People would pay AND tell their friends. The "how does this not exist already?" reaction.
 ```
-**Test:** Describe it to 3 different people in one sentence. If they all say "cool" and don't ask a follow-up question, it's not interesting enough. If one says "wait, can it do X?" — that's traction.
+**Test:** Describe it to 3 different people in one sentence. If they all say "cool" and don't ask a follow-up question, it's not interesting enough. If one says "wait, can it do X?" -- that's traction.
 **Evidence required:** Name the customer persona. Name the price point. Name 3 competitors and what THIS does differently.
 
 ### 8. ELEGANT (Is the code something a great engineer would respect?)
@@ -149,31 +139,31 @@ Before scoring, you MUST:
 
 ---
 
-## SCORING
+## Output Format
 
 <critical>
-IMPORTANT: Think very hard about every score. Cross-reference your evidence against the rubric levels. A score without evidence is a guess — and guesses are always too generous.
+IMPORTANT: Think very hard about every score. Cross-reference your evidence against the rubric levels. A score without evidence is a guess -- and guesses are always too generous.
 </critical>
 
 Run all 10 dimensions. Output:
 
 ```
-╔══════════════════════════════════════════════════╗
-║  PROJECT RUBRIC: [name]                          ║
-╠══════════════════════════════════════════════════╣
-║  1. WORKS      [■■■■■■■■░░]  8/10              ║
-║  2. OBVIOUS    [■■■■■■░░░░]  6/10  <- BLOCKING ║
-║  3. FAST       [■■■■■■■■░░]  8/10              ║
-║  4. SOLID      [■■■■■■■░░░]  7/10              ║
-║  5. TESTED     [■■■■■■■■░░]  8/10              ║
-║  6. ALIVE      [■■■■■░░░░░]  5/10  <- BLOCKING ║
-║  7. MONEY      [■■■■■■░░░░]  6/10  <- BLOCKING ║
-║  8. ELEGANT    [■■■■■■■■░░]  8/10              ║
-║  9. READY      [■■■■■■■░░░]  7/10              ║
-║  10. ORIGINAL  [■■■■■■■░░░]  7/10              ║
-╠══════════════════════════════════════════════════╣
-║  AVERAGE: 7.0  │  BLOCKING: 3  │  NOT READY    ║
-╚══════════════════════════════════════════════════╝
++--------------------------------------------------+
+|  PROJECT RUBRIC: [name]                          |
++--------------------------------------------------+
+|  1. WORKS      [########..]  8/10              |
+|  2. OBVIOUS    [######....]  6/10  <- BLOCKING |
+|  3. FAST       [########..]  8/10              |
+|  4. SOLID      [#######...]  7/10              |
+|  5. TESTED     [########..]  8/10              |
+|  6. ALIVE      [#####.....]  5/10  <- BLOCKING |
+|  7. MONEY      [######....]  6/10  <- BLOCKING |
+|  8. ELEGANT    [########..]  8/10              |
+|  9. READY      [#######...]  7/10              |
+|  10. ORIGINAL  [#######...]  7/10              |
++--------------------------------------------------+
+|  AVERAGE: 7.0  |  BLOCKING: 3  |  NOT READY    |
++--------------------------------------------------+
 
 EVIDENCE PER DIMENSION:
 1. WORKS (8): [specific tests run, specific results]
@@ -189,24 +179,17 @@ VERDICT: NOT PRODUCTION READY
 Fix the 3 blocking dimensions, then re-score.
 ```
 
-## RULES
+## Rules
 
 - **Below 7 in any dimension = NOT READY.** No exceptions. No "but the code is really clean." If users can't figure it out (OBVIOUS < 7), it doesn't matter how clean the code is.
-
 - **The average doesn't matter if any dimension is blocking.** A project scoring 9/10 on everything except SOLID (3/10) ships with security holes. Not ready.
-
 - **Score honestly.** The point is to find what needs work, not to feel good. A harsh score now prevents embarrassment later.
-
 - **Re-score after fixes.** Run the rubric again after addressing blocking dimensions. The score should go UP. If it doesn't, the fixes missed the point.
+- **The rubric is the MINIMUM bar.** 7/10 across the board is "acceptable." 8+ is "good." 9+ is "excellent." Don't celebrate 7s -- aim higher.
 
-- **The rubric is the MINIMUM bar.** 7/10 across the board is "acceptable." 8+ is "good." 9+ is "excellent." Don't celebrate 7s — aim higher.
+## When to Invoke
 
-## USING THE RUBRIC
-
-The rubric should be invoked:
-1. **During production-autopilot** — as part of the verdict phase
-2. **During genesis** — before presenting to the human
-3. **On demand** — when the user says "score this" or "is this ready"
-4. **After major changes** — to verify improvements actually improved things
-
-The production-autopilot and genesis skills should reference this rubric in their verdict phases. The adversary should use it to ground criticisms in specific, measurable dimensions.
+1. **During /production-autopilot** -- as part of the verdict phase
+2. **During /genesis** -- before presenting to the human
+3. **On demand** -- when the user says "score this" or "is this ready"
+4. **After major changes** -- to verify improvements actually improved things
