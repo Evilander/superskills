@@ -113,6 +113,6 @@ MIT
 
 ## Author
 
-Tyler Eveland ([@evilander](https://github.com/evilander))
+[@evilander](https://github.com/evilander)
 
 Built with Claude Code — the skills that make AI build products, not prototypes.
